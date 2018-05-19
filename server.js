@@ -1,6 +1,8 @@
 const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
+var strava = require('strava-v3');
+
 
 const port = process.env.PORT || 3000;
 var app = express();
@@ -46,8 +48,11 @@ app.get('/about', (req, res) => {
 
 // /bad - send back json with errorMessage
 app.get('/bad', (req, res) => {
-  res.send({
-    errorMessage: 'Unable to handle request'
+
+  strava.athlete.get({'access_token':'c25f61d2243edd00057250dffbaa853706f225dd'},function(err,athleteInfo,limits) {
+    res.render('bad.hbs', {
+      athlete: athleteInfo,
+    });
   });
 });
 

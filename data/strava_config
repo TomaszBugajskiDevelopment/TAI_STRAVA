@@ -1,0 +1,7 @@
+
+{
+    "c25f61d2243edd00057250dffbaa853706f225dd"    :"Your apps access token (Required for Quickstart)"
+    , "25722"     :"Your apps Client ID (Required for oauth)"
+    , "409487ed13148c49335c049c0e67141f08c904d2" :"Your apps Client Secret (Required for oauth)"
+    , "redirect_uri"  :"Your apps Authorization Redirection URI (Required for oauth)"
+}
